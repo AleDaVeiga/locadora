@@ -1,0 +1,32 @@
+<h1>Cadastrar Automóvel</h1>
+
+<div class="well">
+    <div class="alert alert-danger" role="alert" *ngIf="msgErro">
+        {{ msgErro }}
+    </div>
+    <form role="form">
+        <div class="form-group">
+            <label class="control-label" for="modelo">Modelo</label>
+            <input type="text" class="form-control" name="modelo" 
+                id="modelo" [(ngModel)]="automovel.modelo">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="marca">Marca</label>
+            <input type="text" class="form-control" name="marca" 
+                id="marca" [(ngModel)]="automovel.marca">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="fabricante">Fabricante</label>
+            <input type="text" class="form-control" name="fabricante" 
+                id="fabricante" [(ngModel)]="automovel.fabricante">
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-success" (click)="cadastrar()">
+                Cadastrar
+            </button>
+			<a class="btn btn-default" [routerLink]="['/automovel-listar']">
+                Voltar
+            </a>
+        </div>
+    </form>
+</div>

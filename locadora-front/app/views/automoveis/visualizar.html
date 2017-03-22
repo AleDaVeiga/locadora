@@ -1,0 +1,25 @@
+<h1>Visualizar Automóvel</h1>
+<div class="alert alert-danger" role="alert" *ngIf="msgErro">
+    {{ msgErro }}
+</div>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>Modelo</th>
+			<td>{{ automovel.modelo }}</td>
+		</tr>
+		<tr>
+            <th>Marca</th>
+            <td>{{ automovel.marca }}</td>
+        </tr>
+		<tr>
+            <th>Fabricante</th>
+            <td>{{ automovel.fabricante }}</td>
+        </tr>
+    </table>
+	<div class="text-center">
+		<a class="btn btn-default" [routerLink]="['/automovel-listar']">
+			Voltar
+		</a>
+	</div>
+</div>

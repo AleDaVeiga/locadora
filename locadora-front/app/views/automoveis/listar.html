@@ -1,0 +1,45 @@
+<h1>Listagem de Automóveis</h1>
+<div class="alert alert-danger" role="alert" *ngIf="msgErro">
+    {{ msgErro }}
+</div>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Fabricante</th>
+            <th class="text-right">
+                <a class="btn btn-success" 
+                    [routerLink]="['/automovel-cadastrar']">
+                    Cadastrar
+                </a>
+            </th>
+        </tr>
+        <tr *ngFor="let automovel of automoveis">
+            <td>{{ automovel.modelo }}</td>
+            <td>{{ automovel.marca }}</td>
+            <td>{{ automovel.fabricante }}</td>
+            <td>
+                <a class="btn btn-warning" 
+                    [routerLink]="['/automovel-visualizar/'+automovel.id]">
+                    Visualizar
+                </a>
+                <a class="btn btn-info" 
+                    [routerLink]="['/automovel-editar/'+automovel.id]">
+                    Editar
+                </a>
+                <button type="button" class="btn btn-danger" 
+                    data-toggle="modal" data-target="#modalExcluir"
+                    (click)="remover(automovel.id)">
+                    Excluir
+                </button>
+            </td>
+        </tr>
+    </table>
+    <modal-util 
+        [id]="'modalExcluir'" 
+        [titulo]="'Excluir Automóvel'"
+        [descricao]="'Deseja realmente excluir o automóvel selecionada?'"
+        (onConfirm)="onExcluir($event)">
+    </modal-util>
+</div>
