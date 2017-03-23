@@ -2,7 +2,7 @@
 
 ## Necessário
 
-Deve estar instalado [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), [Maven](https://maven.apache.org/download.cgi), [Tomcat] (https://tomcat.apache.org/download-80.cgi), [Node JS](https://nodejs.org/en/download/) e [Git](https://git-scm.com/download/win).
+Deve estar instalado [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), [Maven](https://maven.apache.org/download.cgi), [Tomcat](https://tomcat.apache.org/download-80.cgi), [Node JS](https://nodejs.org/en/download/) e [Git](https://git-scm.com/download/win).
 
 ## Compilar o Back-end
 
